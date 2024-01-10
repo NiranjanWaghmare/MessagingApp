@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Public Sans', sans-serif;overflow-y: hidden;}
+.msg-editor{
+    /* border: 10px solid !important; */
+    width: 90%;
+    border: none;
+    background-color: lavender;
+    height: 2rem;
+    border-radius: 20px;
+    padding-left: 25px;
+    font-size: 120%;
+    
+}
+.msg-editor:hover{
+    outline: 1px gray solid;
+   
+}
+.msg-editor:active{
+    outline: 1px gray solid;
+}
+.msg-editor:focus-visible{
+    outline: 1px gray solid;
+}
+
+.card{
+    margin: auto;
+    width: 30vw;
+    height: auto;
+    padding: 1%;
+    /* top:25vh; */
+    background-color: lavender !important;
+    
+}
+
+form{
+    display: contents;
+}
+.align-center{
+    margin: auto;
+    bottom: 50%;
+    top:25vh;
+}
+.right-card{
+    text-align: right;
+    width: 70%;
+    height: calc(90vh - 70px);
+}
+.flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    
+}
+.left-card{
+    border-right: rgb(230, 229, 229) solid;
+    width: 30%;
+    
+    height: calc(90vh - 40px);
+}

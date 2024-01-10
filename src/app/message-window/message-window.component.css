@@ -1,0 +1,55 @@
+.msg-sending-bar{
+    text-align: right;
+    margin-top: -2%;
+    
+    
+}
+.msg-preview{
+    height:89%;
+    background: lavender;
+    position: relative;
+    
+}
+.msg-recip{
+    font: bold;
+    font-size: x-large;
+    text-align: justify;
+    z-index: 10;
+}
+.msg-editor-div{
+    width: 100%;
+    text-align: justify;
+  
+}
+.send-button{
+    position: absolute;
+    z-index: 10;
+    right: 2%;
+    bottom:10%
+}
+.send-button:hover{
+transform: scale(1.1);
+}
+
+.msgs{
+    /* text-align: right; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1.5%;
+
+}
+.msg{
+    border-radius: 20px 20px 0px 20px;
+    font-size: medium;
+}
+.msg:hover{
+    transform: scale(1.05);
+    background-color: rgb(235, 234, 234);
+}
+.msg-time{
+    font-size: small;
+    margin-bottom: 1%;
+    margin-right: 5%;
+    color: gray;
+}

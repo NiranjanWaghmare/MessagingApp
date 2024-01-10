@@ -1,0 +1,21 @@
+<mat-card class="card" *ngIf="isLoading==false">
+    <form #myForm="ngForm" (ngSubmit)="loginRequest(myForm.value)" >
+    <mat-card-header >
+        <h2>Login Page</h2>
+    </mat-card-header>
+    <mat-form-field >
+        <mat-label >Email</mat-label>
+        <input matInput name="email"  [(ngModel)]="email" required >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" name="password"   [(ngModel)]="password" matInput required>
+      </mat-form-field>
+      <a routerLink="../register">Register here</a><br>
+      
+      <button mat-raised-button color="primary" [disabled]="myForm.invalid">Submit</button>
+      </form>
+      
+      
+</mat-card>
+<mat-spinner *ngIf="isLoading == true" class="align-center"></mat-spinner>

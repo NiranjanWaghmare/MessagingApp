@@ -1,0 +1,18 @@
+<div class="modal flex-container">
+<mat-card class="card" *ngIf="isLoading==false">
+    <form #myForm="ngForm" (ngSubmit)="addContact(myForm.value)"  >
+    <mat-card-header >
+        <h2>Add Contact</h2>
+    </mat-card-header>
+    <mat-form-field >
+        <mat-label >Email</mat-label>
+        <input matInput name="email" type="email"  [(ngModel)]="email" required >
+      </mat-form-field>
+      <!-- <mat-error *ngIf="this.isError">{{errorMessage}}</mat-error> -->
+      <!-- <a routerLink="../login">Add here</a><br> -->
+      <button mat-raised-button color="primary" name="submitbutton"  [disabled]="myForm.invalid || this.isError">Add Contact</button>
+      </form>
+      
+</mat-card>
+<mat-spinner *ngIf="this.isLoading == true" class="align-center"></mat-spinner>
+</div>

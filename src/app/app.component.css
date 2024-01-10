@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Public+Sans:wght@500&display=swap');
+
+.chat-list{
+    background-color: lavender ;
+    margin-top: 10rem;
+}
+.navbar{
+    background-color: lavender ;
+    z-index: 500;
+    
+}
+.heading{
+    font-family: 'Ephesis', cursive;
+    margin-top: 01rem;
+    font-size: 6rem;
+    z-index: 1000;
+    position: absolute;
+
+  
+}
+.user{
+    font-family: 'Public Sans', sans-serif;
+    text-align: right;
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+
+
+

@@ -1,0 +1,47 @@
+<mat-card class="card-list">
+  <mat-card-content>  <div class="msg-editor-div" style="text-align: center;">
+    <input matInput type="text" class="msg-editor search-bar" placeholder="Search" [matAutocomplete]="users">
+    <mat-autocomplete #users="matAutocomplete">
+        <mat-option *ngFor="let x of userArray">{{x.name}}</mat-option>
+    </mat-autocomplete>
+    <hr>
+</div>
+
+</mat-card-content>
+  <div class="users-list">
+    
+        <mat-card class="msg-row" *ngFor="let x of userArray; let i = index">
+          <mat-card-header class="user">{{x.name}}</mat-card-header>
+
+          <mat-card-content class="msg"
+            >Hello there!Lorem Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Voluptas voluptatem saepe quod rem incidunt iusto
+            voluptatibus voluptatum repellendus tempora? Obcaecati pariatur
+            similique ut et! Reiciendis iste pariatur obcaecati. Eveniet,
+            natus?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptas praesentium totam dolore reiciendis consectetur corporis
+            voluptatibus delectus. Aut voluptatum aliquid earum, omnis beatae
+            culpa itaque. Labore placeat quam ipsum saepe?Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Ullam autem aliquam voluptas
+            maxime sapiente natus consequuntur, nostrum provident beatae facilis
+            odit odio praesentium perspiciatis quia ut distinctio nihil illo
+            ratione. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Error cupiditate dolore ducimus perferendis earum quisquam, eligendi
+            doloribus, illo accusantium possimus pariatur nemo officiis qui
+            mollitia ad quam neque fugit. Voluptatum. Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Fugiat, voluptates molestiae aliquid
+            repudiandae possimus libero distinctio rem ut facilis, voluptatibus
+            eum illo adipisci corrupti, perferendis nemo a veniam esse
+            ratione?</mat-card-content
+          >
+          <mat-card-footer   color="primary" class="last-seen"><mat-icon class="last-seen-icon" >
+            update
+            </mat-icon>9:16 AM</mat-card-footer></mat-card
+        >
+
+  </div>
+  <button mat-fab color="primary" class="add-button" routerLink="add-contact">
+    <mat-icon>add</mat-icon>
+  </button>
+  
+</mat-card>

@@ -1,0 +1,29 @@
+<mat-card class="card" *ngIf="isLoading==false">
+    <form #myForm="ngForm" (ngSubmit)="registerUser(myForm)"  >
+    <mat-card-header >
+        <h2>Register Page</h2>
+    </mat-card-header>
+    <mat-form-field >
+        <mat-label >Name</mat-label>
+        <input matInput name="name"  [(ngModel)]="name" required minlength="4" >
+      </mat-form-field>
+    <mat-form-field >
+        <mat-label >Email</mat-label>
+        <input matInput name="email" type="email"  [(ngModel)]="email" required >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter Password</mat-label>
+        <input type="password" name="password"   [(ngModel)]="password" matInput required minlength="2" (ngModelChange)="getErrorMessage(myForm.value)">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input type="confirmpassword" name="confirmpassword"   [(ngModel)]="confirmpassword" (ngModelChange)="getErrorMessage(myForm.value)" matInput required minlength="2">
+      </mat-form-field>
+      <mat-error *ngIf="this.isError">{{errorMessage}}</mat-error>
+      <a routerLink="../login">Login here</a><br>
+      <button mat-raised-button color="primary" name="submitbutton"  [disabled]="myForm.invalid || this.isError">Submit</button>
+      </form>
+      
+</mat-card>
+<mat-spinner *ngIf="this.isLoading == true" class="align-center"></mat-spinner>
+<!-- <button mat-stroked-button (click)="openSnackBar()" >Show snack-bar</button> -->
